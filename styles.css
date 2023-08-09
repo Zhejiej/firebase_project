@@ -1,0 +1,40 @@
+body {
+    font-size: 18px;
+    margin: 5% 20%;
+}
+
+nav {
+    left: 50%;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+}
+
+#modal {
+    display: none;
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color:#eff1f5;
+    border-radius: 5px;
+
+    transform: translate(-50%, -50%);
+}
+
+.fields {
+    background-color: #e6e9ef;
+    padding: 5px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input {
+    background-color: #eff1f5;
+}
+
