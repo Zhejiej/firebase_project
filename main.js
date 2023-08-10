@@ -1,8 +1,25 @@
 const addBlogButton = document.getElementById("add-blog");
+
 const modal = document.getElementById("modal");
+const modalOverlay = document.getElementById("modal-overlay");
+const growContainer = document.getElementsByClassName("grow-wrap")[0];
+const textInput = document.getElementsByTagName("textarea")[0];
+
+const form = document.getElementById("blog-form");
+const closeForm = document.getElementById("exit-form");
+
+textInput.addEventListener("input", () => {
+    growContainer.dataset.replicatedValue = textInput.value;
+});
 
 addBlogButton.addEventListener("click", (event) => {
-    modal.style.display = "block";
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
+});
+
+closeForm.addEventListener("click", (event) => {
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
 });
 
 /*
