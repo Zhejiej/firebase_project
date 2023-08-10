@@ -1,8 +1,28 @@
 const addBlogButton = document.getElementById("add-blog");
+
+// modals for blog addition input
 const modal = document.getElementById("modal");
+// darker background when modal is focused
+const modalOverlay = document.getElementById("modal-overlay");
+// these two are used for resizable textarea
+const growContainer = document.getElementsByClassName("grow-wrap")[0];
+const textInput = document.getElementsByTagName("textarea")[0];
+
+const form = document.getElementById("blog-form");
+const closeForm = document.getElementById("exit-form");
+
+textInput.addEventListener("input", () => {
+    growContainer.dataset.replicatedValue = textInput.value;
+});
 
 addBlogButton.addEventListener("click", (event) => {
-    modal.style.display = "block";
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
+});
+
+closeForm.addEventListener("click", (event) => {
+    modal.classList.toggle("closed");
+    modalOverlay.classList.toggle("closed");
 });
 
 /*
