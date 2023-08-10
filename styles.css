@@ -62,19 +62,24 @@ form {
     border: solid #c8c8c8;
     background-color: white;
 
-    z-index: 100000;
+    /* in front of everything */
+    z-index: 100;
     transform: translate(-50%, -50%);
 
+    /* scroll when textarea is too long */
     overflow-y: scroll;
 }
 
+/* darker background when modal is opened */
 .modal-overlay {
-    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
+    /* in front of everything but the modal */
+    z-index: 50;
 
     background: rgba(0, 0, 0, 0.6);
 }
@@ -152,4 +157,3 @@ form {
     /* Place on top of each other */
     grid-area: 1 / 1 / 2 / 2;
 }
-
